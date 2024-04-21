@@ -23,8 +23,8 @@ _✨ 用 Bot 指令执行 Dicexp 表达式 ✨_
 <a href="https://www.npmjs.com/package/koishi-plugin-dicexp">
   <img src="https://img.shields.io/npm/dm/koishi-plugin-dicexp" alt="pypi download">
 </a>
-<a href="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/79af41ae-0173-4c1f-9db2-f87d94569c76">
-  <img src="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/79af41ae-0173-4c1f-9db2-f87d94569c76.svg" alt="wakatime">
+<a href="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/018edd3f-0700-4994-b96c-acb3b80b786a">
+  <img src="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/018edd3f-0700-4994-b96c-acb3b80b786a.svg" alt="wakatime">
 </a>
 
 </div>
