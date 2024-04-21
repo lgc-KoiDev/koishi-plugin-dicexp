@@ -1,0 +1,42 @@
+{
+  "name": "koishi-plugin-dicexp",
+  "description": "Koishi plugin for executing Dicexp",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "author": "student_2333 <lgc2333@126.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/lgc2333/koishi-plugin-dicexp",
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "dice",
+    "dicexp"
+  ],
+  "koishi": {
+    "description": {
+      "zh": "执行 Dicexp 表达式"
+    },
+    "locales": [
+      "zh"
+    ]
+  },
+  "peerDependencies": {
+    "koishi": "^4.17.4"
+  },
+  "dependencies": {
+    "@dicexp/naive-evaluator": "^0.5.0",
+    "@dicexp/naive-evaluator-builtins": "^0.5.0",
+    "@lezer/highlight": "^1.2.0",
+    "@lezer/lr": "^1.4.0",
+    "esm-seedrandom": "^3.0.5"
+  },
+  "devDependencies": {
+    "@dicexp/interface": "^0.5.0"
+  }
+}

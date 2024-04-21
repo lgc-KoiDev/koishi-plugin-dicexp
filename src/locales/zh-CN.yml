@@ -1,0 +1,20 @@
+commands:
+  dicexp:
+    description: 执行 Dicexp 表达式。
+    options:
+      seed: 指定固定随机种子。
+      verbose: 显示详细信息。
+
+dicexp:
+  reply:
+    result: 执行结果：{0}
+    result-verbose: |-
+      随机种子：{0}
+      执行结果：{1}
+    error: |-
+      {0}：
+      {1}
+  error:
+    parse: 解析错误
+    execute: 执行错误
+    other: 未知错误

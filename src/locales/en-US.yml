@@ -1,0 +1,20 @@
+commands:
+  dicexp:
+    description: Execute a Dicexp expression.
+    options:
+      seed: Specify a fixed random seed.
+      verbose: Show detailed information.
+
+dicexp:
+  reply:
+    result: 'Result: {0}'
+    result-verbose: |-
+      Random seed: {0}
+      Result: {1}
+    error: |-
+      {0}:
+      {1}
+  error:
+    parse: ParseError
+    execute: ExecuteError
+    other: UnknownError
