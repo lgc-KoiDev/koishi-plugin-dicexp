@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "emitDeclarationOnly": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@satorijs/element",
     "types": ["node", "yml-register/types"]

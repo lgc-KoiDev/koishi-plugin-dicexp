@@ -57,7 +57,7 @@ export async function apply(ctx: Context) {
   try {
     await applyReal(ctx);
   } catch (e) {
-    ctx.scope.dispose();
+    setTimeout(() => ctx.scope.dispose());
     throw e;
   }
 }
