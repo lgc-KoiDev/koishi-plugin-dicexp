@@ -38,7 +38,7 @@ export async function applyReal(ctx: Context) {
 
       console.log(options.verbose);
       if (result[0] === 'ok') {
-        const res = result[1];
+        const res = JSON.stringify(result[1]);
         return options.verbose
           ? session.text('dicexp.reply.result-verbose', [seed, res])
           : session.text('dicexp.reply.result', [res]);
