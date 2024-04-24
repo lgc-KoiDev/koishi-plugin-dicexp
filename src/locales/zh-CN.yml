@@ -18,3 +18,7 @@ dicexp:
     parse: 解析错误
     execute: 执行错误
     other: 未知错误
+
+_config:
+  - $desc: 基础配置
+    heartbeatTimeout: 硬性超时时间（单位毫秒）。
