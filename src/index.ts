@@ -63,6 +63,7 @@ export async function applyReal(ctx: Context, config: Config) {
     .option('seed', '-s [seed:number]')
     .option('verbose', '-v [verbose:boolean]')
     .action(async ({ session, options }, exp) => {
+      if (!session || !options) return
       if (!exp) return session.execute('help dicexp')
 
       const seed =
