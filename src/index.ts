@@ -29,9 +29,7 @@ export const Config: Schema<Config> = Schema.intersect([
 })
 
 export async function applyReal(ctx: Context, config: Config) {
-  const { EvaluatingWorkerManager } = await import(
-    '@dicexp/naive-evaluator-in-worker'
-  )
+  const { EvaluatingWorkerManager } = await import('@dicexp/naive-evaluator-in-worker')
 
   const workerJsUrl = new URL(
     pathToFileURL(path.join(__dirname, '../resources/worker.js')),
@@ -67,8 +65,7 @@ export async function applyReal(ctx: Context, config: Config) {
       if (!session || !options) return
       if (!exp) return session.execute('help dicexp')
 
-      const seed =
-        options.seed || crypto.getRandomValues(new Uint32Array(1))[0]!
+      const seed = options.seed || crypto.getRandomValues(new Uint32Array(1))[0]!
       const result = await evaluate(exp, seed)
 
       if (result[0] === 'ok') {
