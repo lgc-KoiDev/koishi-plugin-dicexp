@@ -28,7 +28,7 @@
     ]
   },
   "peerDependencies": {
-    "koishi": "^4.17.9"
+    "koishi": "^4.17.10"
   },
   "devDependencies": {
     "@dicexp/interface": "^0.5.0"
