@@ -28,7 +28,7 @@
     ]
   },
   "peerDependencies": {
-    "koishi": "^4.17.10"
+    "koishi": "^4.17.11"
   },
   "devDependencies": {
     "@dicexp/interface": "^0.5.0"
@@ -39,7 +39,7 @@
     "@dicexp/naive-evaluator-in-worker": "^0.5.3",
     "@lezer/common": "^1.2.1",
     "@lezer/highlight": "^1.2.0",
-    "@lezer/lr": "^1.4.1",
+    "@lezer/lr": "^1.4.2",
     "esm-seedrandom": "npm:@lgcnpm/esm-seedrandom@^3.0.6",
     "web-worker": "^1.3.0"
   }
