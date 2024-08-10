@@ -4,6 +4,7 @@ commands:
     options:
       seed: 指定固定随机种子。
       verbose: 显示详细信息。
+      debug: 在详细信息的基础上显示执行步骤信息。
 
 dicexp:
   reply:
@@ -11,6 +12,13 @@ dicexp:
     result-verbose: |-
       随机种子：{0}
       执行结果：{1}
+      执行用时：{2}ms
+    result-debug: |-
+      随机种子：{0}
+      执行结果：{1}
+      执行用时：{2}ms
+      执行步骤：
+      {3}
     error: |-
       {0}：
       {1}
@@ -22,3 +30,7 @@ dicexp:
 _config:
   - $desc: 基础配置
     heartbeatTimeout: 硬性超时时间（单位毫秒）。
+  - $desc: 调试配置
+    listPreviewLimit: 执行步骤中的列表预览数量。设为 `-1` 禁用限制。
+    sumPreviewLimit: 执行步骤中的求和预览数量。设为 `-1` 禁用限制。
+    autoExpansionDepthLimit: 执行步骤中的展开深度限制。设为 `-1` 禁用限制。

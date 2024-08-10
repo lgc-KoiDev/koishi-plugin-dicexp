@@ -4,6 +4,7 @@ commands:
     options:
       seed: Specify a fixed random seed.
       verbose: Show detailed information.
+      debug: Show detailed information and the execution steps.
 
 dicexp:
   reply:
@@ -11,6 +12,13 @@ dicexp:
     result-verbose: |-
       Random seed: {0}
       Result: {1}
+      Execution time: {2}ms
+    result-debug: |-
+      Random seed: {0}
+      Result: {1}
+      Execution time: {2}ms
+      Representation:
+      {3}
     error: |-
       {0}:
       {1}
@@ -18,3 +26,11 @@ dicexp:
     parse: ParseError
     execute: ExecuteError
     other: UnknownError
+
+_config:
+  - $desc: Basic Config
+    heartbeatTimeout: Hard timeout (ms).
+  - $desc: Debug Config
+    listPreviewLimit: The number of items in list to preview in the representation. Set to `-1` to disable.
+    sumPreviewLimit: The number of items in sum to preview in the representation. Set to `-1` to disable.
+    autoExpansionDepthLimit: The maximum depth of expansion in the representation. Set to `-1` to disable.
