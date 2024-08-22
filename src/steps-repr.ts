@@ -20,16 +20,20 @@ export function isWithError(repr: I.Repr): boolean {
   if (isError(repr)) return true
 
   const t = repr[0]
-  if (t === 'vl') return repr[2]
-  if (t === 'i') return repr[2] ? isWithError(repr[2]) : false
-  if (t === 'cr' || t === 'cv') {
-    return repr[4] ? isError(repr[4]) : false
+  switch (t) {
+    case 'vl':
+      return repr[2]
+    case 'i':
+      return repr[2] ? isWithError(repr[2]) : false
+    case 'cr':
+    case 'cv':
+      return repr[4] ? isError(repr[4]) : false
+    case 'c$':
+    case '#':
+      return repr[3] ? isError(repr[3]) : false
+    default:
+      return false
   }
-  if (t === 'c$' || t === '#') {
-    return repr[3] ? isError(repr[3]) : false
-  }
-
-  return false
 }
 
 export function isError(repr: I.Repr) {
@@ -265,8 +269,8 @@ export function transformRegularPiped(
   result?: I.Repr,
 ) {
   const argsLen = args?.length ?? 0
-  if (argsLen <= 1) {
-    throw Error(`Invalid arg count for pipe, expected above 1, got ${argsLen}`)
+  if (argsLen < 1) {
+    throw Error(`Invalid arg count for pipe, expected at least 1, got ${argsLen}`)
   }
   const [head, ...tails] = args!
   return packResult(
@@ -320,8 +324,8 @@ export function transformReprPiped(
   result?: I.Repr,
 ): Fragment[] {
   const argsLen = args?.length ?? 0
-  if (argsLen <= 1) {
-    throw Error(`Invalid arg count for pipe, expected above 1, got ${argsLen}`)
+  if (argsLen < 1) {
+    throw Error(`Invalid arg count for pipe, expected at least 1, got ${argsLen}`)
   }
   const [head, ...tails] = args!
   return packResult(
