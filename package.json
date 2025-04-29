@@ -34,7 +34,7 @@
     "@dicexp/interface": "^0.5.0"
   },
   "dependencies": {
-    "@dicexp/naive-evaluator": "^0.6.0",
+    "@dicexp/naive-evaluator": "^0.6.2",
     "@dicexp/naive-evaluator-builtins": "^0.5.0",
     "@dicexp/naive-evaluator-in-worker": "^0.5.3",
     "@lezer/common": "^1.2.3",
