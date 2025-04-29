@@ -1,13 +1,12 @@
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 
-import { Context, pick, Schema } from 'koishi'
+import type { EvaluationResult } from '@dicexp/interface'
+import { Context, Schema, pick } from 'koishi'
 import Worker from 'web-worker'
 
 import I18nEnUS from './locales/en-US.yml'
 import I18nZhCN from './locales/zh-CN.yml'
-
-import type { EvaluationResult } from '@dicexp/interface'
 import { transformRepr } from './steps-repr'
 
 // if (!globalThis.Worker) globalThis.Worker = Worker;
