@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.koishi",
+  "extends": "../../../tsconfig.koishi",
   "compilerOptions": {
     "emitDeclarationOnly": true,
     "allowJs": true,
